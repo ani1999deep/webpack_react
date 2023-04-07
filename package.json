@@ -13,8 +13,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack server --mode production --open --hot",
-    "build": "webpack --mode production",
+    "start": "webpack server --mode development --open --hot",
+    "build": "webpack --mode development",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

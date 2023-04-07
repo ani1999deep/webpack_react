@@ -3,12 +3,19 @@ const path=require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports={
+    // single-entry-point
     entry: './src/index.js',
+
+    // multiple-entry-point
+    // entry:{
+    //     main:'./src/App.js',
+    //     //vendor:'./s'
+    // },
 
     output:{
 
         path:path.join(__dirname,"/dist"),
-        filename:"main.[fullhash].js"
+        filename:"main.js"
     },
     module:{
 

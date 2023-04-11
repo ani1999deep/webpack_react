@@ -18,7 +18,7 @@ module.exports={
 
         path:path.join(__dirname,"/dist"),
         filename:"main.js",
-        chunkFilename:'[name].bundle.[fullhash].js', //with hash name
+        // chunkFilename:'[name].bundle.[fullhash].js', //with hash name
         chunkFilename:'[name].bundle.js', //without hash name
         
     },

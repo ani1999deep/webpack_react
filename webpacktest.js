@@ -3,6 +3,8 @@ const path=require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports={
+    // mode:"development",
+    mode:"production",
     // single-entry-point
     entry: './src/index.js',
 
@@ -27,35 +29,7 @@ module.exports={
                 use:{
                     loader:"babel-loader"
                 }
-            },
-            {
-                test:/\.css$/,
-                use:[
-                    "style-loader",
-                    "css-loader",
-                  
-                ]
-            },
-            {
-                test: /\.html$/i,
-                loader: "html-loader",
-                options: {
-                  // Disables attributes processing
-                  sources: false,
-                },
-              },
-
-          {
-            test:/\.(svg|png|jpg)$/,
-            use:{
-                loader:"file-loader",
-                options:{
-
-                    name:'[name].[hash].[ext]',
-                    outputPath:'images'
-                }
             }
-          }
         ]
     },
 

@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports={
     // single-entry-point
     entry: './src/index.js',
+   
+    
 
     // multiple-entry-point
     // entry:{
@@ -15,7 +17,9 @@ module.exports={
     output:{
 
         path:path.join(__dirname,"/dist"),
-        filename:"main.js"
+        filename:"main.js",
+        chunkFilename:'[name].bundle.[fullhash].js',
+        
     },
     module:{
 

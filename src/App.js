@@ -12,14 +12,14 @@ const LoadingComponent=()=><h3>Page loading...</h3>
 //For home,if it is loading show the message
 const Home=loadable({
 
-  loader:()=>import ('./Home'),
+  loader:()=>import (/*webpackChunkName:'HomePage'*/'./Home'),
   loading:LoadingComponent
 })
 
 //For About,if it is loading show the message
 const About=loadable({
 
-  loader:()=>import ('./About'),
+  loader:()=>import (/*webpackChunkName:'AboutPage'*/'./About'),
   loading:LoadingComponent
 })
 

@@ -7,7 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkwebpack_react"] = self["webpackChunkwebpack_react"] || []).push([["src_Home_js"],{
+(self["webpackChunkwebpack_react"] = self["webpackChunkwebpack_react"] || []).push([["HomePage"],{
 
 /***/ "./src/Home.js":
 /*!*********************!*\

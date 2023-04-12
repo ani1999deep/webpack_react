@@ -1,6 +1,9 @@
 const port=process.env.PORT || 8080 ;
 const path=require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin}=require("clean-webpack-plugin");
+const MiniCssExtractPlugin= require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin =require('optimize-css-assets-webpack-plugin')
 
 module.exports={
     // single-entry-point
@@ -36,7 +39,9 @@ module.exports={
             {
                 test:/\.css$/,
                 use:[
-                    "style-loader",
+
+                    MiniCssExtractPlugin.loader,
+                    // "style-loader",
                     "css-loader",
                   
                 ]
@@ -64,9 +69,23 @@ module.exports={
         ]
     },
 
-    plugins: [new HtmlWebpackPlugin({
-        template:'src/index.html'
-    })],
+
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            template:'src/index.html',
+            minify:{
+
+                removeAttributeQuotes:true,
+                collapseWhitespace:true,
+                removeComments:true,
+            }
+        }),
+        new OptimizeCssAssetsPlugin(),
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({filename:"[name].[fullhash].css"}),
+
+],
     devServer:{
         host:'localhost',
         port:port,

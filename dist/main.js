@@ -357,7 +357,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + ".bundle.js";
+/******/ 			return "" + chunkId + ".bundle." + __webpack_require__.h() + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -372,7 +372,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "db36f6f5f086bb2ab951"; }
+/******/ 		__webpack_require__.h = function() { return "1fa4bfa7f205762e0fb2"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
